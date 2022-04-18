@@ -1,0 +1,28 @@
+{
+    "os": "Linux-4.15.0-169-generic-x86_64-with-glibc2.27",
+    "python": "3.9.5",
+    "heartbeatAt": "2022-04-17T13:52:47.115089",
+    "startedAt": "2022-04-17T13:52:46.071151",
+    "docker": null,
+    "gpu": "NVIDIA Tesla K80",
+    "gpu_count": 2,
+    "cpu_count": 24,
+    "cuda": null,
+    "args": [
+        "--ip=127.0.0.1",
+        "--stdin=9008",
+        "--control=9006",
+        "--hb=9005",
+        "--Session.signature_scheme=\"hmac-sha256\"",
+        "--Session.key=b\"e083050d-2973-4f93-80f9-4e06b7f7c61e\"",
+        "--shell=9007",
+        "--transport=\"tcp\"",
+        "--iopub=9009",
+        "--f=/tmp/tmp-25332oWRwFRWeiW9n.json"
+    ],
+    "state": "running",
+    "program": "<python with no main file>",
+    "host": "tangra.cs.yale.edu",
+    "username": "lyf6",
+    "executable": "/home/lily/lyf6/miniconda3/bin/python"
+}

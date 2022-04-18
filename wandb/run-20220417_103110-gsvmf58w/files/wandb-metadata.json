@@ -1,0 +1,18 @@
+{
+    "os": "Linux-4.15.0-169-generic-x86_64-with-glibc2.27",
+    "python": "3.9.5",
+    "heartbeatAt": "2022-04-17T14:31:11.715991",
+    "startedAt": "2022-04-17T14:31:10.570488",
+    "docker": null,
+    "gpu": "NVIDIA Tesla K80",
+    "gpu_count": 2,
+    "cpu_count": 24,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/data/lily/lyf6/DRO/dhs_modeling.py",
+    "codePath": "dhs_modeling.py",
+    "host": "tangra.cs.yale.edu",
+    "username": "lyf6",
+    "executable": "/home/lily/lyf6/miniconda3/bin/python3"
+}

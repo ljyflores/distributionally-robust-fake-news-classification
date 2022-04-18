@@ -1,0 +1,1 @@
+{"Average Loss": 0.7129222750663757, "_runtime": 5441, "_timestamp": 1650221341, "_step": 22469, "Group 0 Loss": 0.45646175742149353, "Group 1 Loss": 0.0, "Group 2 Loss": 1.291405439376831, "Group 3 Loss": 0.8081194758415222, "Group 4 Loss": 0.9860579371452332, "Group 5 Loss": 1.1406476497650146, "_wandb": {"runtime": 5539}}

@@ -1,0 +1,66 @@
+Using custom data configuration default
+Reusing dataset liar (/home/lily/lyf6/.cache/huggingface/datasets/liar/default/1.0.0/479463e757b7991eed50ffa7504d7788d6218631a484442e2098dabbf3b44514)
+100% 3/3 [00:00<00:00, 655.94it/s]
+
+
+100% 11/11 [00:06<00:00,  1.75ba/s]
+100% 2/2 [00:00<00:00,  2.66ba/s]
+100% 2/2 [00:00<00:00,  2.70ba/s]
+
+100% 11/11 [00:06<00:00,  1.72ba/s]
+100% 2/2 [00:00<00:00,  2.53ba/s]
+100% 2/2 [00:00<00:00,  2.51ba/s]
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  0% 0/642 [00:00<?, ?it/s]
+Epoch 0
+  0% 0/642 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/data/lily/lyf6/DRO/dhs_modeling.py", line 391, in <module>
+    loss_dict = train(model, criterion, data, args, epoch_offset=0)
+  File "/data/lily/lyf6/DRO/dhs_modeling.py", line 175, in train
+    run_epoch(
+  File "/data/lily/lyf6/DRO/dhs_modeling.py", line 106, in run_epoch
+    outputs = model(**batch)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/parallel/data_parallel.py", line 168, in forward
+    outputs = self.parallel_apply(replicas, inputs, kwargs)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/parallel/data_parallel.py", line 178, in parallel_apply
+    return parallel_apply(replicas, inputs, kwargs, self.device_ids[:len(replicas)])
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/parallel/parallel_apply.py", line 86, in parallel_apply
+    output.reraise()
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/_utils.py", line 434, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in replica 0 on device 0.
+Original Traceback (most recent call last):
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/parallel/parallel_apply.py", line 61, in _worker
+    output = module(*input, **kwargs)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1120, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/transformers/models/bert/modeling_bert.py", line 1530, in forward
+    outputs = self.bert(
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1120, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/transformers/models/bert/modeling_bert.py", line 996, in forward
+    encoder_outputs = self.encoder(
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/transformers/models/bert/modeling_bert.py", line 583, in forward
+    layer_outputs = layer_module(
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/transformers/models/bert/modeling_bert.py", line 470, in forward
+    self_attention_outputs = self.attention(
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/transformers/models/bert/modeling_bert.py", line 400, in forward
+    self_outputs = self.self(
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/lily/lyf6/miniconda3/lib/python3.9/site-packages/transformers/models/bert/modeling_bert.py", line 322, in forward
+    attention_scores = attention_scores / math.sqrt(self.attention_head_size)
+RuntimeError: CUDA out of memory. Tried to allocate 96.00 MiB (GPU 0; 11.17 GiB total capacity; 2.08 GiB already allocated; 23.44 MiB free; 2.12 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
